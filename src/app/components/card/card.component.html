@@ -1,0 +1,9 @@
+<div class="card mt-5" *ngIf="card">
+  <img [src]="card.thumbnailUrl" [alt]="card.title" />
+  <div class="card-body">
+    <h5 class="card-title">{{ card.title }}</h5>
+
+    <a (click)="addToFavs(card)" class="btn btn-outline-danger mx-1">Like</a>
+    <a (click)="delete(card.id)" class="btn btn-outline-primary mx-1">Delete</a>
+  </div>
+</div>
